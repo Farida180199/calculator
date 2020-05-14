@@ -5,9 +5,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Calc {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         String inputString;
-        Pattern p = Pattern.compile("([+]|-|[*]|/|^)");
+        Pattern p = Pattern.compile("(-?\\d+\\.?\\d*)?\\s*(\\S)\\s*(-?\\d+\\.?\\d*)");
         Matcher m;
         double result = 0;
             do {
@@ -21,14 +21,14 @@ public class Calc {
                                 result);
                         System.out.println(result);
                     } else {
-                        System.out.println("wrong input!");
+                        System.out.println("ошибка");
                     }
             }
         }  while(true);
         }
 
 
-    private static double calculate(String[] split, double previousResult) throws Exception {
+    private static double calculate(String[] split, double previousResult) {
         String operand;
         double num1;
         double num2;
