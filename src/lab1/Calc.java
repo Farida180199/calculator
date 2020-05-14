@@ -28,7 +28,7 @@ public class Calc {
         }
 
 
-    private static double calculate(String[] split, double previousResult) {
+    private static double calculate(String[] split, double previousResult) throws Exception {
         String operand;
         double num1;
         double num2;
